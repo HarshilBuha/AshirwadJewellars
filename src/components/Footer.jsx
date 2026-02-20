@@ -9,11 +9,15 @@ const Footer = () => {
     <footer className="bg-[#0D0D0D] text-white pt-24 pb-12 border-t border-[#C5A059]/20">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
-          
+
           {/* --- BRAND COLUMN (4 COLS) --- */}
           <div className="lg:col-span-4">
             <Link to="/" className="flex flex-col mb-8 group w-fit">
-              <Crown className="w-8 h-8 text-[#C5A059] mb-2 transition-transform duration-700 group-hover:rotate-[360deg]" />
+              <img
+                src="../../logo.png"   // put logo inside public folder
+                alt="Ashirwad Jewellers"
+                className="h-10 md:h-12 w-auto object-contain rounded-lg"
+              />
               <h2 className="text-3xl font-['AnticDidone-Regular'] tracking-tight">
                 Ashirwad <span className="italic font-light opacity-80">Jewellers</span>
               </h2>
@@ -89,14 +93,17 @@ const Footer = () => {
             <a href="#" className="hover:text-[#C5A059] transition-colors">Terms</a>
             <a href="#" className="hover:text-[#C5A059] transition-colors">Cookies</a>
           </div>
-          
+
           <p className="text-[10px] font-['Golden'] tracking-[0.2em] text-white/30 uppercase text-center">
             © {currentYear} Ashirwad Jewellers. Handcrafted in India.
           </p>
 
           <div className="flex items-center space-x-2 text-[#C5A059] opacity-80">
             <Sparkles size={14} />
-            <span className="text-[9px] font-['Golden'] tracking-[0.3em] uppercase">BIS Hallmarked</span>
+            <Link to="/extra" className="group px-12 py-4 hover:bg-[#C5A059] transition-all duration-500">
+              <span className="text-[9px] font-['Golden'] tracking-[0.3em] uppercase">BIS Hallmarked</span>
+            </Link>
+
           </div>
         </div>
       </div>

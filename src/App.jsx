@@ -11,7 +11,7 @@ import Cart from './pages/Cart';
 import Favorites from './pages/Favorites';
 import Orders from './pages/Orders';
 import Profile from './pages/Profile';
-
+import Extra from './pages/Extra';
 function App() {
   return (
     <AuthProvider>
@@ -20,6 +20,7 @@ function App() {
           <Navbar />
           <main className="flex-grow">
             <Routes>
+
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
               <Route path="/products/:id" element={<ProductDetail />} />
@@ -27,6 +28,7 @@ function App() {
               <Route path="/favorites" element={<Favorites />} />
               <Route path="/orders" element={<Orders />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/extra" element={<Extra />} />
             </Routes>
           </main>
           <Footer />

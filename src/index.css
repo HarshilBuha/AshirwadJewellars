@@ -53,3 +53,22 @@
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
+
+/* 1. Default for Laptops/Desktops (Landscape) */
+.hero-media {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 2. Media Query for Mobile (Portrait) */
+@media (max-aspect-ratio: 1/1) {
+  .hero-media {
+    width: 50vw;
+    height: auto;
+    min-width: 50vw;
+    object-fit: fill;
+    object-position: center;
+  }
+}
